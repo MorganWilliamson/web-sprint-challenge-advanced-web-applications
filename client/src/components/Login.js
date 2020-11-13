@@ -1,4 +1,7 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
+import axiosWithAuth from "../utils/axiosWithAuth";
 
 const Login = () => {
   // make a post request to retrieve a token from the api
