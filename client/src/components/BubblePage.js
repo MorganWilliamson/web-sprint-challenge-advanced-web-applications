@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
 
 const BubblePage = () => {
   const [colorList, setColorList] = useState([]);
-  const params = useParams();
+  // const params = useParams();
 
   // fetch your colors data from the server when the component mounts
   // set that data to the colorList state property
@@ -22,8 +22,8 @@ const BubblePage = () => {
   };
 
   useEffect(() => {
-    getColors(params.id)
-  }, [params.id])
+    getColors()
+  }, [])
 
 
   return (
